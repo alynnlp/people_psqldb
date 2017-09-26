@@ -1,6 +1,6 @@
-const pg = require("pg");
+const knex = require("knex");
 const settings = require("./settings"); // settings.json
-const client = new pg.Client({
+const client = new knex.Client({
   user     : settings.user,
   password : settings.password,
   database : settings.database,
@@ -9,18 +9,21 @@ const client = new pg.Client({
   ssl      : settings.ssl
 });
 
-// CREATE TABLE famous_people (
-//   id BIGSERIAL PRIMARY KEY,
-//   first_name VARCHAR(50),
-//   last_name VARCHAR(50),
-//   birthdate DATE
-// );
-// INSERT INTO famous_people (first_name, last_name, birthdate)
-//   VALUES ('Abraham', 'Lincoln', '1809-02-12');
-// INSERT INTO famous_people (first_name, last_name, birthdate)
-//   VALUES ('Mahatma', 'Gandhi', '1869-10-02');
-// INSERT INTO famous_people (first_name, last_name, birthdate)
-//   VALUES ('Paul', 'Rudd', '1969-04-06');
+// knex.select('name').from('users')
+// .where('id', '>', 20)
+// .andWhere('id', '<', 200)
+// .limit(10)
+// .offset(x)
+// .asCallback(function(err, rows) {
+//   if (err) return console.error(err);
+//   knex.select('id').from('nicknames')
+//     .whereIn('nickname', _.pluck(rows, 'name'))
+//     .asCallback(function(err, rows) {
+//       if (err) return console.error(err);
+//       console.log(rows);
+//     });
+// });
+
 
 var input = process.argv[2]
 
