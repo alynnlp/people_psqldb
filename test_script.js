@@ -27,3 +27,5 @@ client.connect((err) => {
 // Why does the query function take in an array of arguments?
 // Is there any resemblance to the mongo driver that you used in Week 3, in this activity?
 // What is this new keyword that you see being used to create the client? You may not have seen this before.
+
+}
