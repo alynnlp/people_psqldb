@@ -1,0 +1,23 @@
+{
+  "name": "famouspeople",
+  "version": "1.0.0",
+  "description": "crud operations on psql using pg",
+  "main": "index.js",
+  "dependencies": {
+    "pg": "^7.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alynnlp/people_psqldb.git"
+  },
+  "author": "aileen pang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alynnlp/people_psqldb/issues"
+  },
+  "homepage": "https://github.com/alynnlp/people_psqldb#readme"
+}
